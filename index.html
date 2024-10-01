@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e8aed90d5541010ff41a608e19cb4e28 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+     <div style="position: fixed; 
+                 bottom: 50px; left: 50px; width: 200px; height: 150px; 
+                 border:2px solid grey; z-index:9999; font-size:14px;">
+     &nbsp; <b>Legend</b> <br>
+     &nbsp; <i class="fa fa-map-marker fa-2x" style="color:green"></i>&nbsp; Public Nursing College <br>
+     &nbsp; <i class="fa fa-map-marker fa-2x" style="color:blue"></i>&nbsp; Private Nursing College <br>
+     &nbsp; <i class="fa fa-map-marker fa-2x" style="color:orange"></i>&nbsp; Nursing Institute
+     </div>
+    
+            <div class="folium-map" id="map_e8aed90d5541010ff41a608e19cb4e28" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e8aed90d5541010ff41a608e19cb4e28 = L.map(
+                "map_e8aed90d5541010ff41a608e19cb4e28",
+                {
+                    center: [26.8206, 30.8025],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b39f1f481a11626bbf03e7e529c8945f = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_b39f1f481a11626bbf03e7e529c8945f.addTo(map_e8aed90d5541010ff41a608e19cb4e28);
+        
+    
+            var marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51 = L.markerClusterGroup(
+                {}
+            );
+        
+    
+            var marker_351f1389faf798330db365d9346e7282 = L.marker(
+                [25.52198590000006, 30.60628710000003],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_811629ab072c19dae94ef5851b533fea = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_351f1389faf798330db365d9346e7282.setIcon(icon_811629ab072c19dae94ef5851b533fea);
+        
+    
+        var popup_3953d9bf0add19a5b0d57c3629020860 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2d2d4e8ac2cbaf6812ae093c0d8a2f3d = $(`<div id="html_2d2d4e8ac2cbaf6812ae093c0d8a2f3d" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Fuclty of Nursing,New Valley University<br><b>Snippet:</b> Unnamed Road، قسم الواحات الخارجة،, The New Valley Governorate, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=27.901764249999996&lng=30.3574221&fid=0x1447691312f8b40f:0x1a96ff31fc0891f&hl=en&gl=us&client=earth-client&cv=7.3.6.9</div>`)[0];
+                popup_3953d9bf0add19a5b0d57c3629020860.setContent(html_2d2d4e8ac2cbaf6812ae093c0d8a2f3d);
+            
+        
+
+        marker_351f1389faf798330db365d9346e7282.bindPopup(popup_3953d9bf0add19a5b0d57c3629020860)
+        ;
+
+        
+    
+    
+            var marker_845af8acf2a00771aa01ff2ae9cc8389 = L.marker(
+                [30.576163700000052, 31.011850800000047],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_c4eed788077729ad5ae576648549031a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_845af8acf2a00771aa01ff2ae9cc8389.setIcon(icon_c4eed788077729ad5ae576648549031a);
+        
+    
+        var popup_0c53cfd1509d5b0a18f84f2d80c20143 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2e87c8515b1a28bfcb880237b8265f3c = $(`<div id="html_2e87c8515b1a28bfcb880237b8265f3c" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Faculty Of Nursing Menofia University<br><b>Snippet:</b> H2F6+VR2, Al Ostaz Yassen Abd Al Ghafar, Qism Shebeen El-Kom, Shibin el Kom, Menofia Governorate 6132720, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=30.569557049999997&lng=31.0132734&fid=0x14f7d6c7471b62e3:0xf5b033bc590781e&hl=en&gl=us&client=earth-client&cv=7.3.6.9</div>`)[0];
+                popup_0c53cfd1509d5b0a18f84f2d80c20143.setContent(html_2e87c8515b1a28bfcb880237b8265f3c);
+            
+        
+
+        marker_845af8acf2a00771aa01ff2ae9cc8389.bindPopup(popup_0c53cfd1509d5b0a18f84f2d80c20143)
+        ;
+
+        
+    
+    
+            var marker_25ed2a82801c11971dae9bdea888bc29 = L.marker(
+                [31.427341100000035, 31.649811500000055],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_7c17f433f20325345d9709fb5725cae5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_25ed2a82801c11971dae9bdea888bc29.setIcon(icon_7c17f433f20325345d9709fb5725cae5);
+        
+    
+        var popup_c395428303ce3f9190d45ef1dd660e9e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_11e011f1baa0eb3ab0055e6972245b9b = $(`<div id="html_11e011f1baa0eb3ab0055e6972245b9b" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Faculty of Nursing, Damietta University<br><b>Snippet:</b> CJGX+WWM, Damietta El-Gadeeda City, New Damietta, Damietta Governorate 8022001, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=31.427348300000002&lng=31.649810899999995&fid=0x14f9e3d29c55ff97:0x4c21d62de4bd591a&hl=en&gl=us&client=earth-client&c</div>`)[0];
+                popup_c395428303ce3f9190d45ef1dd660e9e.setContent(html_11e011f1baa0eb3ab0055e6972245b9b);
+            
+        
+
+        marker_25ed2a82801c11971dae9bdea888bc29.bindPopup(popup_c395428303ce3f9190d45ef1dd660e9e)
+        ;
+
+        
+    
+    
+            var marker_246a040e230af09f5ed833cc82b58b12 = L.marker(
+                [31.268103300000064, 32.29843820000008],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_3c3495d6206652be6677d3c0032b2dbf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_246a040e230af09f5ed833cc82b58b12.setIcon(icon_3c3495d6206652be6677d3c0032b2dbf);
+        
+    
+        var popup_54de252a272783ef721358500458bbd3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_52cb5888617e3dab70610d79b10883be = $(`<div id="html_52cb5888617e3dab70610d79b10883be" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Faculty of Nursing Port Said University<br><b>Snippet:</b> جمعية الشباب المسلمين، كلية التمريض, Ahmed Oraby, Port Fouad City, Port Said Governorate 42512, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=31.268103300000007&lng=32.2984382&fid=0x14f99c59c65fac17:0x5bf1c5640aa1ac8e&hl=en&gl=us&client=earth-client&cv=7.3.6.</div>`)[0];
+                popup_54de252a272783ef721358500458bbd3.setContent(html_52cb5888617e3dab70610d79b10883be);
+            
+        
+
+        marker_246a040e230af09f5ed833cc82b58b12.bindPopup(popup_54de252a272783ef721358500458bbd3)
+        ;
+
+        
+    
+    
+            var marker_90e5ab9b02ba5621e88e37c4943d3829 = L.marker(
+                [30.621187400000053, 32.278721500000074],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_2144e2363fee36a8c0ab25504f1479f0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_90e5ab9b02ba5621e88e37c4943d3829.setIcon(icon_2144e2363fee36a8c0ab25504f1479f0);
+        
+    
+        var popup_80c643b9bcde19b7781d8fe7465560da = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7c8b922455f1ec53af3aa89ef8e1974b = $(`<div id="html_7c8b922455f1ec53af3aa89ef8e1974b" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Faculty of Nursing Suez Canal University<br><b>Snippet:</b> J7CH+FFW, El Sheikh Zayed, Ismailia 3, Ismailia Governorate 8366004, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=30.6212342&lng=32.2787091&fid=0x14f859831cacfceb:0xf7f55ca0b810c063&hl=en&gl=us&client=earth-client&cv=7.3.6.9796&use</div>`)[0];
+                popup_80c643b9bcde19b7781d8fe7465560da.setContent(html_7c8b922455f1ec53af3aa89ef8e1974b);
+            
+        
+
+        marker_90e5ab9b02ba5621e88e37c4943d3829.bindPopup(popup_80c643b9bcde19b7781d8fe7465560da)
+        ;
+
+        
+    
+    
+            var marker_d6301029ce6e8562a867466182c02b9c = L.marker(
+                [24.168291600000032, 32.84692810000007],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_bd9c296e6411d1ba57837c945132dfd9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_d6301029ce6e8562a867466182c02b9c.setIcon(icon_bd9c296e6411d1ba57837c945132dfd9);
+        
+    
+        var popup_6b58f86e4cee11bcbf969a87fb711f61 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c74f77105f76fddf4875108142fef15b = $(`<div id="html_c74f77105f76fddf4875108142fef15b" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Faculty of Nursing - Aswan University<br><b>Snippet:</b> 5R9W+8Q9, New Aswan, Aswan Governorate 1251001, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=24.07040635&lng=32.85645775&fid=0x1436651e97a7818d:0x2e9b74a0cc472e9d&hl=en&gl=us&client=earth-client&cv=7.3.6.9796&u</div>`)[0];
+                popup_6b58f86e4cee11bcbf969a87fb711f61.setContent(html_c74f77105f76fddf4875108142fef15b);
+            
+        
+
+        marker_d6301029ce6e8562a867466182c02b9c.bindPopup(popup_6b58f86e4cee11bcbf969a87fb711f61)
+        ;
+
+        
+    
+    
+            var marker_55ed9497de3ccac6d7bffa982ef6ffa1 = L.marker(
+                [31.11237150000005, 27.823175400000025],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_1ac9442d5e1ef876dd353aeeed7e4064 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_55ed9497de3ccac6d7bffa982ef6ffa1.setIcon(icon_1ac9442d5e1ef876dd353aeeed7e4064);
+        
+    
+        var popup_3037440f44a485a4fd3b336ad88f4587 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d9f49f904a898d465b7f99389465c6d4 = $(`<div id="html_d9f49f904a898d465b7f99389465c6d4" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Faculty of Nursing Matrouh University<br><b>Snippet:</b> 4R6F+W7V، قسم مرسى مطروح،, Marsa Matrouh Governorate, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=31.1123633&lng=27.823172999999997&fid=0x1461cfcb1e7a9e89:0xafa3f434a1b0b50a&hl=en&gl=us&client=earth-client&cv=7.3.6.</div>`)[0];
+                popup_3037440f44a485a4fd3b336ad88f4587.setContent(html_d9f49f904a898d465b7f99389465c6d4);
+            
+        
+
+        marker_55ed9497de3ccac6d7bffa982ef6ffa1.bindPopup(popup_3037440f44a485a4fd3b336ad88f4587)
+        ;
+
+        
+    
+    
+            var marker_e2889a66fa91357f1f1eaff448703238 = L.marker(
+                [31.052364900000043, 30.464273200000036],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_c8c56f7661ecd67b1850d6ff6556a05b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_e2889a66fa91357f1f1eaff448703238.setIcon(icon_c8c56f7661ecd67b1850d6ff6556a05b);
+        
+    
+        var popup_1178fb9c93b168b5ab8037d09d5f0fa1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_50ebc7b2564c06eaac7aa67f62a41aed = $(`<div id="html_50ebc7b2564c06eaac7aa67f62a41aed" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Faculty of Nursing - Damanhour University<br><b>Snippet:</b> ش الكورنيش، قسم دمنهور، البحيرة،، الكورنيش، دمنهور، 11222, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=31.052364899999997&lng=30.464273199999997&fid=0x14f66ba00d553dc3:0x33c900b6c2a99174&hl=en&gl=us&client=earth-client&c</div>`)[0];
+                popup_1178fb9c93b168b5ab8037d09d5f0fa1.setContent(html_50ebc7b2564c06eaac7aa67f62a41aed);
+            
+        
+
+        marker_e2889a66fa91357f1f1eaff448703238.bindPopup(popup_1178fb9c93b168b5ab8037d09d5f0fa1)
+        ;
+
+        
+    
+    
+            var marker_c22077d4e80ee01631bf0d93f59c1ea2 = L.marker(
+                [31.09821930000004, 30.951689400000078],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_66c652c76904b62f5e06504a3f50e7c3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_c22077d4e80ee01631bf0d93f59c1ea2.setIcon(icon_66c652c76904b62f5e06504a3f50e7c3);
+        
+    
+        var popup_0605b6c7ef65c1b79cb2c64bfd962897 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7fe9cf11886faa5d6e9a25a2ece922bb = $(`<div id="html_7fe9cf11886faa5d6e9a25a2ece922bb" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Faculty Of Nursing ,Kafr Elshaikh<br><b>Snippet:</b> Qism Kafr El-Shaikh, Kafr Al Sheikh First, Kafr El-Sheikh Governorate 6860404, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=31.098085400000002&lng=30.951610849999994&fid=0x14f7ac7a22b05217:0xcba3b444cdee9d62&hl=en&gl=us&client=earth-client&c</div>`)[0];
+                popup_0605b6c7ef65c1b79cb2c64bfd962897.setContent(html_7fe9cf11886faa5d6e9a25a2ece922bb);
+            
+        
+
+        marker_c22077d4e80ee01631bf0d93f59c1ea2.bindPopup(popup_0605b6c7ef65c1b79cb2c64bfd962897)
+        ;
+
+        
+    
+    
+            var marker_7e6461e8b34cae2381970d52d96f0c39 = L.marker(
+                [26.19681380000003, 32.745178800000076],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_7131d062f11f98596cf7b333f06e1764 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_7e6461e8b34cae2381970d52d96f0c39.setIcon(icon_7131d062f11f98596cf7b333f06e1764);
+        
+    
+        var popup_f9a458fe1dcfad2a9277149259707670 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_54fa17535a850053c6ae809fe5549448 = $(`<div id="html_54fa17535a850053c6ae809fe5549448" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Faculty of Nursing South Valley University<br><b>Snippet:</b> 5PWW+P3F, Qism Qena, Qena, البحر الأحمر 1464091, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=26.196813799999997&lng=32.745178800000005&fid=0x144eb794126f7f15:0x576bd631ba12ff23&hl=en&gl=us&client=earth-client&c</div>`)[0];
+                popup_f9a458fe1dcfad2a9277149259707670.setContent(html_54fa17535a850053c6ae809fe5549448);
+            
+        
+
+        marker_7e6461e8b34cae2381970d52d96f0c39.bindPopup(popup_f9a458fe1dcfad2a9277149259707670)
+        ;
+
+        
+    
+    
+            var marker_dd8b8241140d45544c9d95293c5316aa = L.marker(
+                [28.121583300000054, 30.737573800000064],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_98aa7e6482c53405f163b46f13b178d9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_dd8b8241140d45544c9d95293c5316aa.setIcon(icon_98aa7e6482c53405f163b46f13b178d9);
+        
+    
+        var popup_6addb49ba097d0f310ba603a230ab3a0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_daad49b22dbd3150e532ec3a65b4e349 = $(`<div id="html_daad49b22dbd3150e532ec3a65b4e349" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Faculty Of Nursing - Minia University<br><b>Snippet:</b> Damaris, Second Al Minya, Minya Governorate 2431436, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=28.121583299999998&lng=30.737573800000007&fid=0x145b24eb893d5629:0x53b015453fd36c3e&hl=en&gl=us&client=earth-client&c</div>`)[0];
+                popup_6addb49ba097d0f310ba603a230ab3a0.setContent(html_daad49b22dbd3150e532ec3a65b4e349);
+            
+        
+
+        marker_dd8b8241140d45544c9d95293c5316aa.bindPopup(popup_6addb49ba097d0f310ba603a230ab3a0)
+        ;
+
+        
+    
+    
+            var marker_ccb83b2c565759ffae4f8064971013e9 = L.marker(
+                [29.04256250000003, 31.108812500000056],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_db1eb3411a8554b5dd08b4f37d0c376c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_ccb83b2c565759ffae4f8064971013e9.setIcon(icon_db1eb3411a8554b5dd08b4f37d0c376c);
+        
+    
+        var popup_1101f8e4c3e87c1f1db4f27cfe0be26e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_277b1916abd7d5c7491132df14b7da56 = $(`<div id="html_277b1916abd7d5c7491132df14b7da56" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Faculty of Nursing Beni suif University<br><b>Snippet:</b> 24V5+2GF، شارع طلعت حرب, New Bani Suef City, Beni Suef, Beni Suef Governorate 62511, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=29.0425625&lng=31.1088125&fid=0x145a25b8ba83497d:0x388f4c7dec92a606&hl=en&gl=us&client=earth-client&cv=7.3.6.9796&use</div>`)[0];
+                popup_1101f8e4c3e87c1f1db4f27cfe0be26e.setContent(html_277b1916abd7d5c7491132df14b7da56);
+            
+        
+
+        marker_ccb83b2c565759ffae4f8064971013e9.bindPopup(popup_1101f8e4c3e87c1f1db4f27cfe0be26e)
+        ;
+
+        
+    
+    
+            var marker_3b1421941e30aac2e475e75197a09a02 = L.marker(
+                [29.324397300000044, 30.832175300000074],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_05b0b5c19af7937072e250095a2dca12 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_3b1421941e30aac2e475e75197a09a02.setIcon(icon_05b0b5c19af7937072e250095a2dca12);
+        
+    
+        var popup_9fc37c4600b3c53762992fea20cdb4e1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b05def573ad89110946687682e5783ff = $(`<div id="html_b05def573ad89110946687682e5783ff" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Faculty of Nursing Fayoum University<br><b>Snippet:</b> 8RFJ+QV3, Qesm Al Fayoum, First Al Faiyum, Faiyum Governorate 2933051, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=29.324397299999998&lng=30.832175300000003&fid=0x1459795f8429b9f7:0x9463eca7c30feaef&hl=en&gl=us&client=earth-client&c</div>`)[0];
+                popup_9fc37c4600b3c53762992fea20cdb4e1.setContent(html_b05def573ad89110946687682e5783ff);
+            
+        
+
+        marker_3b1421941e30aac2e475e75197a09a02.bindPopup(popup_9fc37c4600b3c53762992fea20cdb4e1)
+        ;
+
+        
+    
+    
+            var marker_8cc40a5684d47f21ebf5614b5a9d8976 = L.marker(
+                [26.56417810000005, 31.708225],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_fafec4c025a409cb8d28ed9ccc59fc44 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_8cc40a5684d47f21ebf5614b5a9d8976.setIcon(icon_fafec4c025a409cb8d28ed9ccc59fc44);
+        
+    
+        var popup_b40ebee6ff5af5cfad5be25eeb7aa5c2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_560e7f015e8ff2435757a45760fe0bd1 = $(`<div id="html_560e7f015e8ff2435757a45760fe0bd1" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Faculty of Nursing ,Sohag University<br><b>Snippet:</b> Sohag 2, Sohag Governorate 1684097, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=26.565254099999997&lng=31.708063&fid=0x144f5eb1f3cd774f:0xb886c0c380e9327a&hl=en&gl=us&client=earth-client&cv=7.3.6.9</div>`)[0];
+                popup_b40ebee6ff5af5cfad5be25eeb7aa5c2.setContent(html_560e7f015e8ff2435757a45760fe0bd1);
+            
+        
+
+        marker_8cc40a5684d47f21ebf5614b5a9d8976.bindPopup(popup_b40ebee6ff5af5cfad5be25eeb7aa5c2)
+        ;
+
+        
+    
+    
+            var marker_f57d0f7f1b5cfbd2cd939c22ee7d8b08 = L.marker(
+                [30.587393, 31.480369100000075],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_241e7c48d18c8e6937230c7f64b0b26f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_f57d0f7f1b5cfbd2cd939c22ee7d8b08.setIcon(icon_241e7c48d18c8e6937230c7f64b0b26f);
+        
+    
+        var popup_6d6cbfc5aa86dc980e78ad40b07f81a7 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b4e522c0c3011418a1be59587c773bf9 = $(`<div id="html_b4e522c0c3011418a1be59587c773bf9" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Faculty of Nursing Zagazig University<br><b>Snippet:</b> HFPJ+W6P، شارع الجامعة, Shaibet an Nakareyah, Zagazig 2, Al-Sharqia Governorate 44519, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=30.5873256&lng=31.4805642&fid=0x14f7f052706099b7:0x5cdb164b9eda0fc6&hl=en&gl=us&client=earth-client&cv=7.3.6.9796&use</div>`)[0];
+                popup_6d6cbfc5aa86dc980e78ad40b07f81a7.setContent(html_b4e522c0c3011418a1be59587c773bf9);
+            
+        
+
+        marker_f57d0f7f1b5cfbd2cd939c22ee7d8b08.bindPopup(popup_6d6cbfc5aa86dc980e78ad40b07f81a7)
+        ;
+
+        
+    
+    
+            var marker_5d737fb203d6d926f7e5c424b3c399cf = L.marker(
+                [30.476206, 31.197264500000074],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_e2de373479fa92c61645d9add570957f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_5d737fb203d6d926f7e5c424b3c399cf.setIcon(icon_e2de373479fa92c61645d9add570957f);
+        
+    
+        var popup_1af4de8e7553453f0594e184ef1ed657 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_63ae0cd934dca836f8a58266197c965e = $(`<div id="html_63ae0cd934dca836f8a58266197c965e" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Banha University,Faculty of Nursing<br><b>Snippet:</b> Qism Banha, Second Banha, Al-Qalyubia Governorate 6470270, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=30.476180300000003&lng=31.197313599999998&fid=0x14f7df6badfbee81:0xe34f2ceb66142167&hl=en&gl=us&client=earth-client&c</div>`)[0];
+                popup_1af4de8e7553453f0594e184ef1ed657.setContent(html_63ae0cd934dca836f8a58266197c965e);
+            
+        
+
+        marker_5d737fb203d6d926f7e5c424b3c399cf.bindPopup(popup_1af4de8e7553453f0594e184ef1ed657)
+        ;
+
+        
+    
+    
+            var marker_424cafae95f74675e8ec619f24e7dc19 = L.marker(
+                [30.79983640000006, 30.99290620000005],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_8cc77bc12b5ecab88928794c5023ffa4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_424cafae95f74675e8ec619f24e7dc19.setIcon(icon_8cc77bc12b5ecab88928794c5023ffa4);
+        
+    
+        var popup_f10dc32a9418bf09702321d3ac2afe62 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_089d161a6f5a2b099f60837707aa2131 = $(`<div id="html_089d161a6f5a2b099f60837707aa2131" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Tanta University,College of Nursing<br><b>Snippet:</b> RX2V+4C9, Al Doctor Naghatti, Tanta Qism 2, First Tanta, Gharbia Governorate 6624033, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=30.7998341&lng=30.992903499999997&fid=0x14f7c9792b76aa1d:0x563caf579f6d3839&hl=en&gl=us&client=earth-client&cv=7.3.6.</div>`)[0];
+                popup_f10dc32a9418bf09702321d3ac2afe62.setContent(html_089d161a6f5a2b099f60837707aa2131);
+            
+        
+
+        marker_424cafae95f74675e8ec619f24e7dc19.bindPopup(popup_f10dc32a9418bf09702321d3ac2afe62)
+        ;
+
+        
+    
+    
+            var marker_3e5eb1d2ba65f19b177d269ef5c69ce7 = L.marker(
+                [29.86397420000003, 31.315301900000065],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_4fbff327631e1efc3967307b3c449536 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_3e5eb1d2ba65f19b177d269ef5c69ce7.setIcon(icon_4fbff327631e1efc3967307b3c449536);
+        
+    
+        var popup_4e9a363ebc90d852fd986b04c1a9a98e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a420bc96603e57490569db1f7afe3140 = $(`<div id="html_a420bc96603e57490569db1f7afe3140" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Faculty of Nursing, Helwan University<br><b>Snippet:</b> Al Sikka Al Hadid Al Gharbeya, Al Masaken Al Iqtisadeyah, Helwan, Cairo Governorate 4034572, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=29.863974199999998&lng=31.315301899999998&fid=0x1458368c5c53ec11:0x4f2b9cba40c68743&hl=en&gl=us&client=earth-client&c</div>`)[0];
+                popup_4e9a363ebc90d852fd986b04c1a9a98e.setContent(html_a420bc96603e57490569db1f7afe3140);
+            
+        
+
+        marker_3e5eb1d2ba65f19b177d269ef5c69ce7.bindPopup(popup_4e9a363ebc90d852fd986b04c1a9a98e)
+        ;
+
+        
+    
+    
+            var marker_2e1e1cd15ae2a0dd535668e5f9a097fb = L.marker(
+                [27.18342190000004, 31.167543300000034],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_da9540d3f8255999c30d4a6f7cedd21b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_2e1e1cd15ae2a0dd535668e5f9a097fb.setIcon(icon_da9540d3f8255999c30d4a6f7cedd21b);
+        
+    
+        var popup_3bcc16e3b281b6b7197ab686acd56db7 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_20c6b48c581a9c4e32137aec329225bc = $(`<div id="html_20c6b48c581a9c4e32137aec329225bc" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Assiut University, Faculty Of Nursing<br><b>Snippet:</b> Al Walideyah Al Qebleyah, Asyut 1, Assiut Governorate 2072350, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=27.1832967&lng=31.167162450000003&fid=0x14450be29ea5b415:0xa43ecc44ee39d0e8&hl=en&gl=us&client=earth-client&cv=7.3.6.</div>`)[0];
+                popup_3bcc16e3b281b6b7197ab686acd56db7.setContent(html_20c6b48c581a9c4e32137aec329225bc);
+            
+        
+
+        marker_2e1e1cd15ae2a0dd535668e5f9a097fb.bindPopup(popup_3bcc16e3b281b6b7197ab686acd56db7)
+        ;
+
+        
+    
+    
+            var marker_f37876dee72385f1931bb02a76ad285a = L.marker(
+                [31.039770600000054, 31.36032410000007],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_99d39f8c5947ede30543f054609c6277 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_f37876dee72385f1931bb02a76ad285a.setIcon(icon_99d39f8c5947ede30543f054609c6277);
+        
+    
+        var popup_7594f64a28c0f6fead6937d2b5eeb66f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_29798d19bd4bcc13839c97eee59dad5a = $(`<div id="html_29798d19bd4bcc13839c97eee59dad5a" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Faculty Of Nursing Mansoura University<br><b>Snippet:</b> Mit Khamis WA Kafr Al Mougi, El Mansoura 1, Dakahlia Governorate 7650030, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=31.039770599999997&lng=31.360324100000003&fid=0x14f79dd38c8a86a1:0xf34a847e37573c3&hl=en&gl=us&client=earth-client&cv</div>`)[0];
+                popup_7594f64a28c0f6fead6937d2b5eeb66f.setContent(html_29798d19bd4bcc13839c97eee59dad5a);
+            
+        
+
+        marker_f37876dee72385f1931bb02a76ad285a.bindPopup(popup_7594f64a28c0f6fead6937d2b5eeb66f)
+        ;
+
+        
+    
+    
+            var marker_c53424b27771817fb48d80ae48b784b8 = L.marker(
+                [31.208705, 29.94555660000003],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_6b57ba9237e570ee7847affaf961eb54 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_c53424b27771817fb48d80ae48b784b8.setIcon(icon_6b57ba9237e570ee7847affaf961eb54);
+        
+    
+        var popup_6884cb6ee4b3e3d4cf87d97f90b7fc17 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3b86f6a2a9134f8160d84d2115f79b79 = $(`<div id="html_3b86f6a2a9134f8160d84d2115f79b79" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Faculty Of Nursing Alexandria University<br><b>Snippet:</b> 6W5W+F6M, Izbat Saed, Sidi Gaber, Alexandria Governorate 5432042, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=31.208705&lng=29.9455566&fid=0x14f5c499876f072d:0xd6276e4d4a94d1c1&hl=en&gl=us&client=earth-client&cv=7.3.6.9796&user</div>`)[0];
+                popup_6884cb6ee4b3e3d4cf87d97f90b7fc17.setContent(html_3b86f6a2a9134f8160d84d2115f79b79);
+            
+        
+
+        marker_c53424b27771817fb48d80ae48b784b8.bindPopup(popup_6884cb6ee4b3e3d4cf87d97f90b7fc17)
+        ;
+
+        
+    
+    
+            var marker_88b77a74ec2506b11d2f587f4d8a7cc0 = L.marker(
+                [30.074621500000035, 31.279868500000077],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_52cabdabc8e2f77d12023cfb946896e5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_88b77a74ec2506b11d2f587f4d8a7cc0.setIcon(icon_52cabdabc8e2f77d12023cfb946896e5);
+        
+    
+        var popup_c0944758c450a227ac16a383de4477bf = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_35d60bb4ba276482418fa5ebb8a29614 = $(`<div id="html_35d60bb4ba276482418fa5ebb8a29614" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Faculty of Nursing - Ain Shams University<br><b>Snippet:</b> 37FH+RWX, El-Mohamady, El Weili, Cairo Governorate 4390042, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=30.0746215&lng=31.279868500000003&fid=0x14583f289ac079f5:0xdfc52c6b0c033416&hl=en&gl=us&client=earth-client&cv=7.3.6.</div>`)[0];
+                popup_c0944758c450a227ac16a383de4477bf.setContent(html_35d60bb4ba276482418fa5ebb8a29614);
+            
+        
+
+        marker_88b77a74ec2506b11d2f587f4d8a7cc0.bindPopup(popup_c0944758c450a227ac16a383de4477bf)
+        ;
+
+        
+    
+    
+            var marker_4c6dded1284c39172e7c5818903afe72 = L.marker(
+                [30.032755400000042, 31.228128800000036],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_15a93a266d1716336467ce788533f9a9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_4c6dded1284c39172e7c5818903afe72.setIcon(icon_15a93a266d1716336467ce788533f9a9);
+        
+    
+        var popup_7ea928fcde886e744e2b84acc330db45 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7a0f62f354cd174daf591e9ba1fd9071 = $(`<div id="html_7a0f62f354cd174daf591e9ba1fd9071" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Faculty Of Nursing - Cairo University<br><b>Snippet:</b> 26MH+37V، KASR EL AINY, Old Cairo, Cairo Governorate 4240310, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=30.0327398&lng=31.228169599999998&fid=0x14584732886d214d:0x1a927b7f214cf2d0&hl=en&gl=us&client=earth-client&cv=7.3.6.</div>`)[0];
+                popup_7ea928fcde886e744e2b84acc330db45.setContent(html_7a0f62f354cd174daf591e9ba1fd9071);
+            
+        
+
+        marker_4c6dded1284c39172e7c5818903afe72.bindPopup(popup_7ea928fcde886e744e2b84acc330db45)
+        ;
+
+        
+    
+    
+            var marker_30f10798fbe160d77be6da64938a64fa = L.marker(
+                [30.353323900000078, 31.20181350000007],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_baff9d3cc7ad9372947e5365e8d37db2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_30f10798fbe160d77be6da64938a64fa.setIcon(icon_baff9d3cc7ad9372947e5365e8d37db2);
+        
+    
+        var popup_4a84eb4f67ef7e3a9989338ff9e00b03 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_69c7bd999744d1da92864697bbbb1631 = $(`<div id="html_69c7bd999744d1da92864697bbbb1631" style="width: 100.0%; height: 100.0%;"><b>Name:</b> معهد تمريض الوادي الجديد الخاص<br><b>Snippet:</b> 9632+8PP، من، Toukh, Al-Qalyubia Governorate 6440512, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=30.353326699999997&lng=31.201814499999994&fid=0x14587300337cc789:0x2ec30dde31d00e73&hl=en&gl=us&client=earth-client&c</div>`)[0];
+                popup_4a84eb4f67ef7e3a9989338ff9e00b03.setContent(html_69c7bd999744d1da92864697bbbb1631);
+            
+        
+
+        marker_30f10798fbe160d77be6da64938a64fa.bindPopup(popup_4a84eb4f67ef7e3a9989338ff9e00b03)
+        ;
+
+        
+    
+    
+            var marker_32ccf853602194b3dedf100a7155b69e = L.marker(
+                [31.13671450000004, 33.807726900000034],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_fa3b3a7d3625b16e623cdb2c75e910d5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_32ccf853602194b3dedf100a7155b69e.setIcon(icon_fa3b3a7d3625b16e623cdb2c75e910d5);
+        
+    
+        var popup_156fae1182e0fa162cfac0dadb609b4d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_16f7d9fd379af4c954d199994213792d = $(`<div id="html_16f7d9fd379af4c954d199994213792d" style="width: 100.0%; height: 100.0%;"><b>Name:</b> المعهد الفني للتمريض بالعريش<br><b>Snippet:</b> 4RP5+P43, Qesm Thaleth Al Arish, North Sinai Governorate 8955170, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=31.136761699999997&lng=33.807782599999996&fid=0x14fdd3416bb511e1:0x58b85a3bcb3178b8&hl=en&gl=us&client=earth-client&c</div>`)[0];
+                popup_156fae1182e0fa162cfac0dadb609b4d.setContent(html_16f7d9fd379af4c954d199994213792d);
+            
+        
+
+        marker_32ccf853602194b3dedf100a7155b69e.bindPopup(popup_156fae1182e0fa162cfac0dadb609b4d)
+        ;
+
+        
+    
+    
+            var marker_ead9583f69a21b02df7672e0ff6c129f = L.marker(
+                [31.27634640000008, 32.266396100000065],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_b4cc1558a6d04e8773d487310de851a3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_ead9583f69a21b02df7672e0ff6c129f.setIcon(icon_b4cc1558a6d04e8773d487310de851a3);
+        
+    
+        var popup_d646511e809264ad7a49201f72b808e0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2565e79fc6622f8a5f54da88941c834b = $(`<div id="html_2565e79fc6622f8a5f54da88941c834b" style="width: 100.0%; height: 100.0%;"><b>Name:</b> المعهد الفني للتمريض<br><b>Snippet:</b> 77G8+GHJ، الشهيد محمد حسن عبدالواحد المناخلى،، الزهور،، قسم المناخ،, Port Said Governorate, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=29.699&lng=31.520699999999998&fid=0x14f99d0fe65a831d:0x66aa8ccb0e7ade56&hl=en&gl=us&client=earth-client&cv=7.3.6.9796</div>`)[0];
+                popup_d646511e809264ad7a49201f72b808e0.setContent(html_2565e79fc6622f8a5f54da88941c834b);
+            
+        
+
+        marker_ead9583f69a21b02df7672e0ff6c129f.bindPopup(popup_d646511e809264ad7a49201f72b808e0)
+        ;
+
+        
+    
+    
+            var marker_ea5bb976535d70e9c599e77b4c261f89 = L.marker(
+                [31.276112500000067, 32.26687730000003],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_fca4f149e7ece1d9c85c721b37a9826f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_ea5bb976535d70e9c599e77b4c261f89.setIcon(icon_fca4f149e7ece1d9c85c721b37a9826f);
+        
+    
+        var popup_f11a8f2f323308e5dfd91ffe7d668177 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c03adc8c2afb11afbb60d30abfee44fa = $(`<div id="html_c03adc8c2afb11afbb60d30abfee44fa" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Port Said Nursing Institute<br><b>Snippet:</b> 77G8+CQR, Al Zehour, Port Fouad City, Port Said Governorate 8544103, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=29.699&lng=31.520699999999998&fid=0x14f99c7f3a8ec9c1:0x7db2f50895775dee&hl=en&gl=us&client=earth-client&cv=7.3.6.9796</div>`)[0];
+                popup_f11a8f2f323308e5dfd91ffe7d668177.setContent(html_c03adc8c2afb11afbb60d30abfee44fa);
+            
+        
+
+        marker_ea5bb976535d70e9c599e77b4c261f89.bindPopup(popup_f11a8f2f323308e5dfd91ffe7d668177)
+        ;
+
+        
+    
+    
+            var marker_206a4959af9eba4369dc13f6b82d3709 = L.marker(
+                [31.097978100000034, 30.951497300000028],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_2c4f95f077dacd630c569d627d828a06 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_206a4959af9eba4369dc13f6b82d3709.setIcon(icon_2c4f95f077dacd630c569d627d828a06);
+        
+    
+        var popup_d604572c66d97744888838bd877e930f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_523fd6ca24db960221760ade1658c672 = $(`<div id="html_523fd6ca24db960221760ade1658c672" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Technical Institute of Nursing, Kafrelsheikh University<br><b>Snippet:</b> 3XX2+5HX، كفر الشيخ، قسم كفر الشيخ، كفر الشيخ،, Kafr Al Sheikh First, Gharbia Governorate, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=29.699&lng=31.520699999999998&fid=0x14f7ad51ab42519b:0x5623b15f457355de&hl=en&gl=us&client=earth-client&cv=7.3.6.9796</div>`)[0];
+                popup_d604572c66d97744888838bd877e930f.setContent(html_523fd6ca24db960221760ade1658c672);
+            
+        
+
+        marker_206a4959af9eba4369dc13f6b82d3709.bindPopup(popup_d604572c66d97744888838bd877e930f)
+        ;
+
+        
+    
+    
+            var marker_60023169d099ba375bf936619e2a6f9d = L.marker(
+                [30.562950400000034, 31.014696],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_4ca5eeff3568c175e71896b855763967 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_60023169d099ba375bf936619e2a6f9d.setIcon(icon_4ca5eeff3568c175e71896b855763967);
+        
+    
+        var popup_d3bf63a92482422edcf3de3b645955d3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3287d271e1f59a94677b60df2f21d1b8 = $(`<div id="html_3287d271e1f59a94677b60df2f21d1b8" style="width: 100.0%; height: 100.0%;"><b>Name:</b> المعهد الفني للتمريض جامعة المنوفية<br><b>Snippet:</b> H277+5VP, Qism Shebeen El-Kom, Shibin el Kom, Menofia Governorate 6132602, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=29.699&lng=31.520699999999998&fid=0x14f7d6ec6a540c01:0x4bafd023b2c8f685&hl=en&gl=us&client=earth-client&cv=7.3.6.9796</div>`)[0];
+                popup_d3bf63a92482422edcf3de3b645955d3.setContent(html_3287d271e1f59a94677b60df2f21d1b8);
+            
+        
+
+        marker_60023169d099ba375bf936619e2a6f9d.bindPopup(popup_d3bf63a92482422edcf3de3b645955d3)
+        ;
+
+        
+    
+    
+            var marker_11e90ae009b0f3f6defa3b89c576067c = L.marker(
+                [30.75582460000004, 31.811423],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_b10ba077b850eaf0e18180041ad59b5a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_11e90ae009b0f3f6defa3b89c576067c.setIcon(icon_b10ba077b850eaf0e18180041ad59b5a);
+        
+    
+        var popup_6a9714e3a03a1919c6022220a735a02c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b80574b806a5aff2e1d19cbce91bc4ff = $(`<div id="html_b80574b806a5aff2e1d19cbce91bc4ff" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Technical Institute of Nursing, Zagazig University Faqous Branch<br><b>Snippet:</b> Bani Sereid, Faqous, Al-Sharqia Governorate 7334109, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=29.699&lng=31.520699999999998&fid=0x14f83b5929fea453:0x2ba73633a5637683&hl=en&gl=us&client=earth-client&cv=7.3.6.9796</div>`)[0];
+                popup_6a9714e3a03a1919c6022220a735a02c.setContent(html_b80574b806a5aff2e1d19cbce91bc4ff);
+            
+        
+
+        marker_11e90ae009b0f3f6defa3b89c576067c.bindPopup(popup_6a9714e3a03a1919c6022220a735a02c)
+        ;
+
+        
+    
+    
+            var marker_cd9d27b72fccd8925be775a2cc7f26c3 = L.marker(
+                [28.121583300000054, 30.737573800000064],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_776c378cee147f40c242cbb477424a58 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_cd9d27b72fccd8925be775a2cc7f26c3.setIcon(icon_776c378cee147f40c242cbb477424a58);
+        
+    
+        var popup_9bb0172903f83eea28eed7ad6d866b07 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d75d99898985df634ced178d9783ee68 = $(`<div id="html_d75d99898985df634ced178d9783ee68" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Faculty Of Nursing - Minia University<br><b>Snippet:</b> Damaris, Second Al Minya, Minya Governorate 2431436, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=28.121583299999998&lng=30.737573800000007&fid=0x145b24eb893d5629:0x53b015453fd36c3e&hl=en&gl=us&client=earth-client&c</div>`)[0];
+                popup_9bb0172903f83eea28eed7ad6d866b07.setContent(html_d75d99898985df634ced178d9783ee68);
+            
+        
+
+        marker_cd9d27b72fccd8925be775a2cc7f26c3.bindPopup(popup_9bb0172903f83eea28eed7ad6d866b07)
+        ;
+
+        
+    
+    
+            var marker_fa929d115ecfea3c1d13c6caf9a23954 = L.marker(
+                [31.097978100000034, 30.951497300000028],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_7218de51ac9d5040d88ff68de44ebed4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_fa929d115ecfea3c1d13c6caf9a23954.setIcon(icon_7218de51ac9d5040d88ff68de44ebed4);
+        
+    
+        var popup_7c174ac2e6e3e91c5b7accb9df8aeeb6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_423a4a5216a93b2cc136e045f613ccf3 = $(`<div id="html_423a4a5216a93b2cc136e045f613ccf3" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Technical Institute of Nursing, Kafrelsheikh University<br><b>Snippet:</b> 3XX2+5HX، كفر الشيخ، قسم كفر الشيخ، كفر الشيخ،, Kafr Al Sheikh First, Gharbia Governorate, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=31.0979781&lng=30.951497299999993&fid=0x14f7ad51ab42519b:0x5623b15f457355de&hl=en&gl=us&client=earth-client&cv=7.3.6.</div>`)[0];
+                popup_7c174ac2e6e3e91c5b7accb9df8aeeb6.setContent(html_423a4a5216a93b2cc136e045f613ccf3);
+            
+        
+
+        marker_fa929d115ecfea3c1d13c6caf9a23954.bindPopup(popup_7c174ac2e6e3e91c5b7accb9df8aeeb6)
+        ;
+
+        
+    
+    
+            var marker_ae5b12b3615042885c01ec2e39fdcb73 = L.marker(
+                [29.324258600000064, 30.831786900000054],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_a125c5c21cb8e841d487a796b3444680 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_ae5b12b3615042885c01ec2e39fdcb73.setIcon(icon_a125c5c21cb8e841d487a796b3444680);
+        
+    
+        var popup_9be62008af87065e3b60f9e414627efe = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3b540cd0d3b78d75c21032dc1c86deac = $(`<div id="html_3b540cd0d3b78d75c21032dc1c86deac" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Technical Institute of Nursing, Fayoum University<br><b>Snippet:</b> Qesm Al Fayoum, First Al Faiyum, Faiyum Governorate 2933051, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=29.324258600000007&lng=30.831786899999997&fid=0x1459793d0faf065d:0xe8fbd74b34a22b5d&hl=en&gl=us&client=earth-client&c</div>`)[0];
+                popup_9be62008af87065e3b60f9e414627efe.setContent(html_3b540cd0d3b78d75c21032dc1c86deac);
+            
+        
+
+        marker_ae5b12b3615042885c01ec2e39fdcb73.bindPopup(popup_9be62008af87065e3b60f9e414627efe)
+        ;
+
+        
+    
+    
+            var marker_8efb65bd2df1179a56985511096de3da = L.marker(
+                [26.18757830000004, 32.74285110000005],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_9efd62ba2f83048063370e42a9af1200 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_8efb65bd2df1179a56985511096de3da.setIcon(icon_9efd62ba2f83048063370e42a9af1200);
+        
+    
+        var popup_2850ccfa21d57b456fc998d0c153ab3e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_74bdd9b3cfa00e3713aa2c1835b0f690 = $(`<div id="html_74bdd9b3cfa00e3713aa2c1835b0f690" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Qena,Technical Institute of Nursing<br><b>Snippet:</b> 5PQV+26R, Qena, Red Sea Governate 1464040, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=26.187608899999997&lng=32.7430021&fid=0x144eb7b8d962283f:0x3c5a32404e3bd3d7&hl=en&gl=us&client=earth-client&cv=7.3.6.</div>`)[0];
+                popup_2850ccfa21d57b456fc998d0c153ab3e.setContent(html_74bdd9b3cfa00e3713aa2c1835b0f690);
+            
+        
+
+        marker_8efb65bd2df1179a56985511096de3da.bindPopup(popup_2850ccfa21d57b456fc998d0c153ab3e)
+        ;
+
+        
+    
+    
+            var marker_e48e5022a6ecc1f684d4c9657d1199c0 = L.marker(
+                [29.108834400000035, 31.171634700000027],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_b111b1be5068a9e64197d938ce1b34d3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_e48e5022a6ecc1f684d4c9657d1199c0.setIcon(icon_b111b1be5068a9e64197d938ce1b34d3);
+        
+    
+        var popup_9a64644737f1282cda6638fcfc9429ca = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_30cf07e921cdbd39bc5c8944d8a8dfd5 = $(`<div id="html_30cf07e921cdbd39bc5c8944d8a8dfd5" style="width: 100.0%; height: 100.0%;"><b>Name:</b> المعهد التكنولوجى للتمريض ببنى سويف<br><b>Snippet:</b> 455C+HHW, Beni Suef, Beni Suef Governorate 2718432, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=29.05735955&lng=31.1166309&fid=0x145a214bccc439bd:0x28d0f1aa20d0c613&hl=en&gl=us&client=earth-client&cv=7.3.6.9796&us</div>`)[0];
+                popup_9a64644737f1282cda6638fcfc9429ca.setContent(html_30cf07e921cdbd39bc5c8944d8a8dfd5);
+            
+        
+
+        marker_e48e5022a6ecc1f684d4c9657d1199c0.bindPopup(popup_9a64644737f1282cda6638fcfc9429ca)
+        ;
+
+        
+    
+    
+            var marker_652f227eca7d038bf8ecc07f124199cd = L.marker(
+                [29.08453090000006, 31.1044],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_04dbcc76635a97fc4878fe6080ef78d1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_652f227eca7d038bf8ecc07f124199cd.setIcon(icon_04dbcc76635a97fc4878fe6080ef78d1);
+        
+    
+        var popup_dbbc2dbcd0804fefefd952b73c90fa9a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3ddf7994e82079335867c08f094f677d = $(`<div id="html_3ddf7994e82079335867c08f094f677d" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Beni suif,Health Technical Institute<br><b>Snippet:</b> 34M3+RQM, Qism Bani Sweif, Beni Suef, Beni Suef Governorate 2721610, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=29.05735955&lng=31.1166309&fid=0x145a266aefd3cdfb:0x13b6757714b59294&hl=en&gl=us&client=earth-client&cv=7.3.6.9796&us</div>`)[0];
+                popup_dbbc2dbcd0804fefefd952b73c90fa9a.setContent(html_3ddf7994e82079335867c08f094f677d);
+            
+        
+
+        marker_652f227eca7d038bf8ecc07f124199cd.bindPopup(popup_dbbc2dbcd0804fefefd952b73c90fa9a)
+        ;
+
+        
+    
+    
+            var marker_e3cce8931ab04e8b6274279768297d93 = L.marker(
+                [30.626104, 32.267927],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_fe81f1779de3e3c667f419aa161d2724 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_e3cce8931ab04e8b6274279768297d93.setIcon(icon_fe81f1779de3e3c667f419aa161d2724);
+        
+    
+        var popup_80ed66240d0cef5098554997a9fb9dd0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0c5568caf43e1bfd9051db66bf98cc6a = $(`<div id="html_0c5568caf43e1bfd9051db66bf98cc6a" style="width: 100.0%; height: 100.0%;"><b>Name:</b> المعهد الفنى للتمريض بالإسماعيلية<br><b>Snippet:</b> J7F9+WP8، الشيخ زايد، مركز الاسماعيلية، الإسماعيلية 8366004،, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=30.62370725&lng=32.273316699999995&fid=0x14f859b01582378d:0x9e55e52be45371ab&hl=en&gl=us&client=earth-client&cv=7.3.6</div>`)[0];
+                popup_80ed66240d0cef5098554997a9fb9dd0.setContent(html_0c5568caf43e1bfd9051db66bf98cc6a);
+            
+        
+
+        marker_e3cce8931ab04e8b6274279768297d93.bindPopup(popup_80ed66240d0cef5098554997a9fb9dd0)
+        ;
+
+        
+    
+    
+            var marker_01f3f8270d214000a86af16632b6fa3a = L.marker(
+                [26.566232300000024, 31.707930300000044],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_efb4051f60ca9817486c94613d239086 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_01f3f8270d214000a86af16632b6fa3a.setIcon(icon_efb4051f60ca9817486c94613d239086);
+        
+    
+        var popup_c7488581bd4a1c23da6fad856053f0dc = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_72a3571cad1d3bcecae464065abd3db0 = $(`<div id="html_72a3571cad1d3bcecae464065abd3db0" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Technical Institute of Nursing, Sohag University<br><b>Snippet:</b> El-Khouly, Sohag 1, Sohag Governorate 1684097, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=26.5662856&lng=31.7079283&fid=0x144f5eb02a3dc367:0xaedb219fe7ebdb97&hl=en&gl=us&client=earth-client&cv=7.3.6.9796&use</div>`)[0];
+                popup_c7488581bd4a1c23da6fad856053f0dc.setContent(html_72a3571cad1d3bcecae464065abd3db0);
+            
+        
+
+        marker_01f3f8270d214000a86af16632b6fa3a.bindPopup(popup_c7488581bd4a1c23da6fad856053f0dc)
+        ;
+
+        
+    
+    
+            var marker_40a32561f69d6523d24b14edeba98c9a = L.marker(
+                [30.799865100000034, 30.99325630000004],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_0e416e319fadcb135c65778baed0b6c2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_40a32561f69d6523d24b14edeba98c9a.setIcon(icon_0e416e319fadcb135c65778baed0b6c2);
+        
+    
+        var popup_df87876e0b857a321418fb85f7e38713 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_84390552f2e7902c13662ceecd07fbfa = $(`<div id="html_84390552f2e7902c13662ceecd07fbfa" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Technical Institute of Nursing, Tanta University<br><b>Snippet:</b> الدور الثالث أعلى العيادة الشاملة ش/ د.نجاتى من شارع البحر, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=30.799852700000002&lng=30.993083749999993&fid=0x14f7c97e2abc5075:0x355f868468f70de5&hl=en&gl=us&client=earth-client&c</div>`)[0];
+                popup_df87876e0b857a321418fb85f7e38713.setContent(html_84390552f2e7902c13662ceecd07fbfa);
+            
+        
+
+        marker_40a32561f69d6523d24b14edeba98c9a.bindPopup(popup_df87876e0b857a321418fb85f7e38713)
+        ;
+
+        
+    
+    
+            var marker_d2afbac02719fb76c591897b09b80363 = L.marker(
+                [30.799834100000055, 30.992903500000068],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_dac0a772c48c0e3f0a91678687c80b6f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_d2afbac02719fb76c591897b09b80363.setIcon(icon_dac0a772c48c0e3f0a91678687c80b6f);
+        
+    
+        var popup_f9f6614ced2320ac57ad32060df60aca = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5110b94048841aaed8c422b49b5ea9ea = $(`<div id="html_5110b94048841aaed8c422b49b5ea9ea" style="width: 100.0%; height: 100.0%;"><b>Name:</b> معهد فني تمريض طنطا<br><b>Snippet:</b> QXXV+W5J معهد فني تمريض, Tanta Qism 2, First Tanta, Gharbia Governorate 6624033, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=30.799852700000002&lng=30.993083749999993&fid=0x14f7c9e02408ffcb:0xd3f6c82a59b97084&hl=en&gl=us&client=earth-client&c</div>`)[0];
+                popup_f9f6614ced2320ac57ad32060df60aca.setContent(html_5110b94048841aaed8c422b49b5ea9ea);
+            
+        
+
+        marker_d2afbac02719fb76c591897b09b80363.bindPopup(popup_f9f6614ced2320ac57ad32060df60aca)
+        ;
+
+        
+    
+    
+            var marker_e79aecaca7fdc1e4bc1c21654ec414c6 = L.marker(
+                [30.471042500000067, 31.180801200000076],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_4e7b8e046e4b9069bf5101ebb1ec9320 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_e79aecaca7fdc1e4bc1c21654ec414c6.setIcon(icon_4e7b8e046e4b9069bf5101ebb1ec9320);
+        
+    
+        var popup_8308e5b9f9bc6036301b9b66aac45a5f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_91344672e9cd130671452bd21ab2fbb7 = $(`<div id="html_91344672e9cd130671452bd21ab2fbb7" style="width: 100.0%; height: 100.0%;"><b>Name:</b> المعهد الفني للتمريض جامعة بنها<br><b>Snippet:</b> F5CJ+C87, Qism Banha, Second Banha, Al-Qalyubia Governorate 6470110, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=30.471042500000006&lng=31.180801199999994&fid=0x14f7df50f58c8e4b:0x2cc5094b9f67c984&hl=en&gl=us&client=earth-client&c</div>`)[0];
+                popup_8308e5b9f9bc6036301b9b66aac45a5f.setContent(html_91344672e9cd130671452bd21ab2fbb7);
+            
+        
+
+        marker_e79aecaca7fdc1e4bc1c21654ec414c6.bindPopup(popup_8308e5b9f9bc6036301b9b66aac45a5f)
+        ;
+
+        
+    
+    
+            var marker_30d6f21da01afd0bc272e75714767dee = L.marker(
+                [30.586215200000026, 31.48600710000005],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_e5506537babbc65a5e43cd8d0fea32e9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_30d6f21da01afd0bc272e75714767dee.setIcon(icon_e5506537babbc65a5e43cd8d0fea32e9);
+        
+    
+        var popup_e7031272a631030ec6464ff5841c7d0e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_da798e0281a1744fea37c63039130e7b = $(`<div id="html_da798e0281a1744fea37c63039130e7b" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Nursing institute Zagazig University<br><b>Snippet:</b> Faculty of medicine, Nursing School Building, Sor Al Gamaa St, Shaibet an Nakareyah, Zagazig 2, Al-Sharqia Governorate 7120001, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=30.5862692&lng=31.4860082&fid=0x14f7f0547bedb1f3:0x96efdbf88bd27f66&hl=en&gl=us&client=earth-client&cv=7.3.6.9796&use</div>`)[0];
+                popup_e7031272a631030ec6464ff5841c7d0e.setContent(html_da798e0281a1744fea37c63039130e7b);
+            
+        
+
+        marker_30d6f21da01afd0bc272e75714767dee.bindPopup(popup_e7031272a631030ec6464ff5841c7d0e)
+        ;
+
+        
+    
+    
+            var marker_8aae3ade74c87868b915d4e93422c118 = L.marker(
+                [27.18318750000003, 31.16684710000004],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_28eedfefa9f7499300ccf94ce1c87c81 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_8aae3ade74c87868b915d4e93422c118.setIcon(icon_28eedfefa9f7499300ccf94ce1c87c81);
+        
+    
+        var popup_8c1c95c8497f0a39f66e38f8cc7fb6aa = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_77d0a95e498a367b4461bf0376f569d1 = $(`<div id="html_77d0a95e498a367b4461bf0376f569d1" style="width: 100.0%; height: 100.0%;"><b>Name:</b> المعهد الفني للتمريض جامعة أسيوط<br><b>Snippet:</b> 55M8+7P7، الوليدية القبلية، قسم ثان أسيوط،, Asyut 1, Assiut Governorate, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=27.1831715&lng=31.1667816&fid=0x144509d8d37a718b:0xd40ac153306786e5&hl=en&gl=us&client=earth-client&cv=7.3.6.9796&use</div>`)[0];
+                popup_8c1c95c8497f0a39f66e38f8cc7fb6aa.setContent(html_77d0a95e498a367b4461bf0376f569d1);
+            
+        
+
+        marker_8aae3ade74c87868b915d4e93422c118.bindPopup(popup_8c1c95c8497f0a39f66e38f8cc7fb6aa)
+        ;
+
+        
+    
+    
+            var marker_c497016f0cfa19a633c3d30657d7b0c2 = L.marker(
+                [31.038673, 31.36695220000007],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_31b28e7fc44187c5f35f24d86a3f6f08 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_c497016f0cfa19a633c3d30657d7b0c2.setIcon(icon_31b28e7fc44187c5f35f24d86a3f6f08);
+        
+    
+        var popup_3ea6173cf3581bc186d61e2552519293 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_47e88ca8d43471c3a94044abf0e8d860 = $(`<div id="html_47e88ca8d43471c3a94044abf0e8d860" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Technical Institute of Nursing<br><b>Snippet:</b> Koliet Al Adaab St, Mansoura Qism 2, El Mansoura 1, Dakahlia Governorate 7650166, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=31.038693599999995&lng=31.366907700000002&fid=0x14f79d1293eaf321:0x8a923cfae9a7516c&hl=en&gl=us&client=earth-client&c</div>`)[0];
+                popup_3ea6173cf3581bc186d61e2552519293.setContent(html_47e88ca8d43471c3a94044abf0e8d860);
+            
+        
+
+        marker_c497016f0cfa19a633c3d30657d7b0c2.bindPopup(popup_3ea6173cf3581bc186d61e2552519293)
+        ;
+
+        
+    
+    
+            var marker_b4b9cb1b3be2977ffdd61ab18695a422 = L.marker(
+                [31.20132160000003, 29.905845400000032],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_de674e35b6472f0d966062221bc213ad = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_b4b9cb1b3be2977ffdd61ab18695a422.setIcon(icon_de674e35b6472f0d966062221bc213ad);
+        
+    
+        var popup_9b2805e7ac5f6b3948945ee35b1ec177 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cab428791eac10e2341f0220e1c8dd27 = $(`<div id="html_cab428791eac10e2341f0220e1c8dd27" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Technical Institute of Nursing Alexandria University<br><b>Snippet:</b> 6W24+G8G, Al Mesallah Sharq, Al Attarin, Alexandria Governorate 5372066, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=31.201314099999994&lng=29.905835599999996&fid=0x14f5c3d20dfd91e1:0x8b5578174c5437f8&hl=en&gl=us&client=earth-client&c</div>`)[0];
+                popup_9b2805e7ac5f6b3948945ee35b1ec177.setContent(html_cab428791eac10e2341f0220e1c8dd27);
+            
+        
+
+        marker_b4b9cb1b3be2977ffdd61ab18695a422.bindPopup(popup_9b2805e7ac5f6b3948945ee35b1ec177)
+        ;
+
+        
+    
+    
+            var marker_6641fb4c55dc74572dfcc4ff1441faaf = L.marker(
+                [30.028922700000066, 31.228360500000065],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_3ad63f416525754a92457d6cb9502bc3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_6641fb4c55dc74572dfcc4ff1441faaf.setIcon(icon_3ad63f416525754a92457d6cb9502bc3);
+        
+    
+        var popup_5709ea656c37e4e3f147deb2bbea8511 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6e998bccdfb2861f3435503d9b40b5ca = $(`<div id="html_6e998bccdfb2861f3435503d9b40b5ca" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Technical Institute of Nursing Cairo University Egypt<br><b>Snippet:</b> 26HH+J88, Al Saraya, Old Cairo, Cairo Governorate 4240310, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=30.051742200000003&lng=31.1276485&fid=0x1458472e206d0a15:0xefac0e9920c831d&hl=en&gl=us&client=earth-client&cv=7.3.6.9</div>`)[0];
+                popup_5709ea656c37e4e3f147deb2bbea8511.setContent(html_6e998bccdfb2861f3435503d9b40b5ca);
+            
+        
+
+        marker_6641fb4c55dc74572dfcc4ff1441faaf.bindPopup(popup_5709ea656c37e4e3f147deb2bbea8511)
+        ;
+
+        
+    
+    
+            var marker_9521751dc302e9c144ddd50887c9c152 = L.marker(
+                [30.07444170000008, 31.27904230000007],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_66d79a74f3f17831389c0e5fd5b95b8c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_9521751dc302e9c144ddd50887c9c152.setIcon(icon_66d79a74f3f17831389c0e5fd5b95b8c);
+        
+    
+        var popup_f33f69670be0675b24b4b3eae9cdaf0a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7ea9cab28d0cc3346d4f1139fc734b2a = $(`<div id="html_7ea9cab28d0cc3346d4f1139fc734b2a" style="width: 100.0%; height: 100.0%;"><b>Name:</b> The Technical Institute for Nursing - Ain Shams University<br><b>Snippet:</b> El-Mohamady, El Weili, Cairo Governorate 4390042, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=30.051742200000003&lng=31.1276485&fid=0x14583f7a9f174b1d:0xd70ebb6ea381f818&hl=en&gl=us&client=earth-client&cv=7.3.6.</div>`)[0];
+                popup_f33f69670be0675b24b4b3eae9cdaf0a.setContent(html_7ea9cab28d0cc3346d4f1139fc734b2a);
+            
+        
+
+        marker_9521751dc302e9c144ddd50887c9c152.bindPopup(popup_f33f69670be0675b24b4b3eae9cdaf0a)
+        ;
+
+        
+    
+    
+            var marker_95a3fc0e91825018ec23bb795a0089e9 = L.marker(
+                [30.04916510000004, 30.976254700000027],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_52cb3d2484217a16a5fcda0b3fe98983 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_95a3fc0e91825018ec23bb795a0089e9.setIcon(icon_52cb3d2484217a16a5fcda0b3fe98983);
+        
+    
+        var popup_79896230221a7c9dfb2e6cdd95f9de2a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ab3139b69c4fd925873d3d4adec4c0f9 = $(`<div id="html_ab3139b69c4fd925873d3d4adec4c0f9" style="width: 100.0%; height: 100.0%;"><b>Name:</b> معهد فني تمريض اورام القاهرة<br><b>Snippet:</b> 2XXG+MG6, Second Al Sheikh Zayed, Giza Governorate 3242750, Egypt<br><b>PopupInfo:</b> <!DOCTYPE html><html><head></head><body><script type="text/javascript">window.location.href="https://www.google.com/earth/rpc/entity?lat=30.051742200000003&lng=31.1276485&fid=0x14585979563f1381:0x79f1b03e1eb95ce2&hl=en&gl=us&client=earth-client&cv=7.3.6.</div>`)[0];
+                popup_79896230221a7c9dfb2e6cdd95f9de2a.setContent(html_ab3139b69c4fd925873d3d4adec4c0f9);
+            
+        
+
+        marker_95a3fc0e91825018ec23bb795a0089e9.bindPopup(popup_79896230221a7c9dfb2e6cdd95f9de2a)
+        ;
+
+        
+    
+    
+            var marker_93f345ffba37df806a93925e7620f1af = L.marker(
+                [27.39915497476659, 33.67019262693368],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_48bff2f19c4e700a2e7689e8d8a56383 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_93f345ffba37df806a93925e7620f1af.setIcon(icon_48bff2f19c4e700a2e7689e8d8a56383);
+        
+    
+        var popup_0de8955fcc46390de9e9558a46e1b751 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_202a2d711b7bdc7a7e5f78d018caaab7 = $(`<div id="html_202a2d711b7bdc7a7e5f78d018caaab7" style="width: 100.0%; height: 100.0%;"><b>معهد تمريض الجونة</b><br>.</div>`)[0];
+                popup_0de8955fcc46390de9e9558a46e1b751.setContent(html_202a2d711b7bdc7a7e5f78d018caaab7);
+            
+        
+
+        marker_93f345ffba37df806a93925e7620f1af.bindPopup(popup_0de8955fcc46390de9e9558a46e1b751)
+        ;
+
+        
+    
+    
+            var marker_daedc0d8750cea7785c81c547379981d = L.marker(
+                [29.9567, 30.9579],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_bf3391c4853aea435f8dab7b2354f229 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_daedc0d8750cea7785c81c547379981d.setIcon(icon_bf3391c4853aea435f8dab7b2354f229);
+        
+    
+        var popup_fd77dbfe9f36e3ece9d96cb4276aca6c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c63aa3eaec8a1390e8cb08258d95c169 = $(`<div id="html_c63aa3eaec8a1390e8cb08258d95c169" style="width: 100.0%; height: 100.0%;"><b>Name:</b> MUST, Faculty of Nursing<br></div>`)[0];
+                popup_fd77dbfe9f36e3ece9d96cb4276aca6c.setContent(html_c63aa3eaec8a1390e8cb08258d95c169);
+            
+        
+
+        marker_daedc0d8750cea7785c81c547379981d.bindPopup(popup_fd77dbfe9f36e3ece9d96cb4276aca6c)
+        ;
+
+        
+    
+    
+            var marker_67b022493179f29c89c932b153f61853 = L.marker(
+                [30.1199, 31.6166],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_6d806309376c5e993167c7d3f24a4e91 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_67b022493179f29c89c932b153f61853.setIcon(icon_6d806309376c5e993167c7d3f24a4e91);
+        
+    
+        var popup_fe4655e6dc9a716a88c6305e57350218 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cd09c6aeca1e5f3ce2e6366a9543f42a = $(`<div id="html_cd09c6aeca1e5f3ce2e6366a9543f42a" style="width: 100.0%; height: 100.0%;"><b>Name:</b> The British University in Egypt, Faculty of Nursing<br></div>`)[0];
+                popup_fe4655e6dc9a716a88c6305e57350218.setContent(html_cd09c6aeca1e5f3ce2e6366a9543f42a);
+            
+        
+
+        marker_67b022493179f29c89c932b153f61853.bindPopup(popup_fe4655e6dc9a716a88c6305e57350218)
+        ;
+
+        
+    
+    
+            var marker_d0ca715861c0bfafb3783e96c4905471 = L.marker(
+                [29.993, 31.3114],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_6851f01a837017b41277d20a2b0683c4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d0ca715861c0bfafb3783e96c4905471.setIcon(icon_6851f01a837017b41277d20a2b0683c4);
+        
+    
+        var popup_f3de3d126c50210d24eb3bdba53c4c26 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f4a0a2acd38ed9e5fbe2dd7e078e1232 = $(`<div id="html_f4a0a2acd38ed9e5fbe2dd7e078e1232" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Modern University for Technology & Information<br></div>`)[0];
+                popup_f3de3d126c50210d24eb3bdba53c4c26.setContent(html_f4a0a2acd38ed9e5fbe2dd7e078e1232);
+            
+        
+
+        marker_d0ca715861c0bfafb3783e96c4905471.bindPopup(popup_f3de3d126c50210d24eb3bdba53c4c26)
+        ;
+
+        
+    
+    
+            var marker_66e96cc339197ac900c3d9f746501a35 = L.marker(
+                [30.1258, 31.7018],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_d2169547abd00d09d2cf2f712a50f450 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_66e96cc339197ac900c3d9f746501a35.setIcon(icon_d2169547abd00d09d2cf2f712a50f450);
+        
+    
+        var popup_314f1a2857c315f078140ec58fa0973b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6e79c4c5795649795ab02864c2d0899f = $(`<div id="html_6e79c4c5795649795ab02864c2d0899f" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Faculty of Nursing - Badr University in Cairo (BUC)<br></div>`)[0];
+                popup_314f1a2857c315f078140ec58fa0973b.setContent(html_6e79c4c5795649795ab02864c2d0899f);
+            
+        
+
+        marker_66e96cc339197ac900c3d9f746501a35.bindPopup(popup_314f1a2857c315f078140ec58fa0973b)
+        ;
+
+        
+    
+    
+            var marker_8d313f25ecc0a9400c72c80b8b05aee8 = L.marker(
+                [29.979, 30.9494],
+                {}
+            ).addTo(marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51);
+        
+    
+            var icon_2d261fd69a9b307b454205f209d9a8d9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8d313f25ecc0a9400c72c80b8b05aee8.setIcon(icon_2d261fd69a9b307b454205f209d9a8d9);
+        
+    
+        var popup_615bfb47b0fc74a7626f60e9a045eef8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c4759652243174b8588b88f305ce6dd5 = $(`<div id="html_c4759652243174b8588b88f305ce6dd5" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Faculty of Nursing<br></div>`)[0];
+                popup_615bfb47b0fc74a7626f60e9a045eef8.setContent(html_c4759652243174b8588b88f305ce6dd5);
+            
+        
+
+        marker_8d313f25ecc0a9400c72c80b8b05aee8.bindPopup(popup_615bfb47b0fc74a7626f60e9a045eef8)
+        ;
+
+        
+    
+    
+            marker_cluster_b9cb490a4a7cc5a278b677bdc1c49f51.addTo(map_e8aed90d5541010ff41a608e19cb4e28);
+        
+</script>
+</html>
